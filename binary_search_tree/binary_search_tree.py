@@ -12,7 +12,6 @@ This part of the project comprises two days:
 import sys
 sys.path.append("../singly_linked_list/")
 
-
 from collections import deque
 
 class BSTNode:
@@ -87,6 +86,7 @@ class BSTNode:
     # Print the value of every node, starting with the given node,
     # in an iterative breadth first traversal
     def bft_print(self, node):
+        # Q IS THE POINTER VARIABLE THAT UPDATES WITHIN THE LOOP BELOW
         q = deque()
         q.append(self)
 
@@ -101,6 +101,7 @@ class BSTNode:
     # Print the value of every node, starting with the given node,
     # in an iterative depth first traversal
     def dft_print(self, node):
+        # Q IS THE POINTER VARIABLE THAT UPDATES WITHIN THE LOOP BELOW
         q = deque()
         q.append(self)
 
