@@ -12,27 +12,19 @@ class Node:
 
         self.next_node = next_node
 
-​
-
     def get_value(self):
 
         return self.value
 
-​
-
     def get_next(self):
 
         return self.next_node
-
-​
 
     def set_next(self, new_next):
 
         # set this node's next_node reference to the passed in node
 
         self.next_node = new_next
-
-​
 
 class LinkedList:
 
@@ -45,8 +37,6 @@ class LinkedList:
         # reference to the tail of the list
 
         self.tail = None
-
-​
 
     def add_to_tail(self, value):
 
@@ -75,8 +65,6 @@ class LinkedList:
             # set the list's tail reference to the new node
 
             self.tail = new_node
-
-​
 
     def remove_head(self):
 
@@ -116,15 +104,11 @@ class LinkedList:
 
         return value
 
-​
-
     def remove_tail(self):
 
         if not self.head:
 
             return None
-
-        
 
         if self.head is self.tail:
 
@@ -136,17 +120,11 @@ class LinkedList:
 
             return value
 
-        
-
         current = self.head
-
-​
 
         while current.get_next() is not self.tail:
 
             current = current.get_next()
-
-​
 
         value = self.tail.get_value()
 
@@ -154,15 +132,11 @@ class LinkedList:
 
         return value
 
-​
-
     def contains(self, value):
 
         if not self.head:
 
             return False
-
-​
 
         # Recursive solution
 
@@ -179,7 +153,6 @@ class LinkedList:
         #   return search(node.get_next())
 
         # return search(self.head)
-
     
 
         # get a reference to the node we're currently at; update this as we traverse the list
@@ -203,8 +176,6 @@ class LinkedList:
         # if we've gotten here, then the target node isn't in our list
 
         return False
-
-​
 
     def get_max(self):
 

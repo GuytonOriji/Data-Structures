@@ -55,3 +55,111 @@ class Stack:
         if self.size > 0:
             self.size -= 1
             return self.storage.remove_tail()
+
+
+
+
+
+# test = "57 57 -57 57"
+# test = map(int, test.split())
+
+
+
+# def run(test):
+
+#   maxNum = max(test)
+#   import copy
+
+#   def sec():
+#       temp = copy.copy(maxNum)
+#       itt = 0
+#       nextArr = []
+#       for num in test:
+#           if num < temp:
+#               nextArr.append(num)
+#           elif itt == len(test):
+#               # third()
+#               ans = max(nextArr)
+#               break
+#           itt = itt + 1
+      
+#       print(ans)
+
+#   def first():
+#       temp = copy.copy(maxNum)
+#       temp = temp - 1
+
+#       itt = 0
+#       for num in temp:
+#           if temp == num:
+#               temp = num
+#               break
+#           elif itt == len(test):
+#               sec()
+#               break
+#           itt = itt + 1
+#       print(temp)
+#   first()
+ 
+# run(test)
+
+
+
+
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+
+import copy
+
+maxNum = max(arr)
+
+
+
+
+# def third():
+#     temp = copy.copy(maxNum)
+#     temp = temp - 1
+#     itt = 0
+#     for num in arr:
+#         if temp - 4 == num:
+#             temp = num
+#             break
+
+#         elif itt == len(arr):
+#             break
+#         itt = itt + 1
+#     print(temp)
+    
+
+def sec():
+    temp = copy.copy(maxNum)
+    itt = 0
+    nextArr = []
+    for num in arr:
+        if num < temp:
+            nextArr.append(num)
+        # elif itt == len(arr):
+        #     # third()
+           
+        #     break
+        itt = itt + 1
+    ans = max(nextArr)
+    print(ans)
+
+def first():
+    temp = copy.copy(maxNum)
+    temp = temp - 1
+
+    itt = 0
+    for num in arr:
+        if temp == num:
+            temp = num
+            return print(temp)
+            break
+        elif itt == len(arr):
+            sec()
+            break
+        itt = itt + 1
+first()
+ 
