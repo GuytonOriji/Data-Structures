@@ -16,20 +16,20 @@ sys.path.append("../singly_linked_list/")
 from collections import deque
 
 class BSTNode:
-       def __init__(self, value):
+    def __init__(self, value):
         self.value = value
         self.left = None
         self.right = None
 
     # Insert the given value into the tree
-    def insert(self, value):
-     
+    def insert(self,value):
         #if node is pointing 2 None or node has no value
         if self.value is None:
+
             #set self.value to the value of the node
             self.value = value
 
-        elif value >= self.value:
+        elif value >= self.value:#cant remove '='...needs to be '>=' or test will not pass
             # if new value is greater it will go to the right, check if we already have a node on right
             if self.right:
             # if node.right is there, insert the value
